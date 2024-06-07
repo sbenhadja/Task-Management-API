@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "c8402e9c-4b1a-4821-8a9e-ebc70618610c",
+		"name": "Task Manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29732023"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@mail.com\",\r\n    \"is_active\": true,\r\n    \"username\": \"test\",\r\n    \"password\": \"test\",\r\n    \"first_name\":\"\",\r\n    \"last_name\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/user/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks/uuid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzQ3NjMwLCJpYXQiOjE3MTAzNDY3MzAsImp0aSI6IjI3NTBlZmRlMzA1MDQwYmRhMWM5ZDc4OTQ0NmU5MDdmIiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.LQ1c2H0gAcQgb4BxMLN5zlsYYBV1wdue9izDOGi2woY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/fad0aa5e-415a-4a37-9471-8efd5980be40",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"fad0aa5e-415a-4a37-9471-8efd5980be40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzQ3NjMwLCJpYXQiOjE3MTAzNDY3MzAsImp0aSI6IjI3NTBlZmRlMzA1MDQwYmRhMWM5ZDc4OTQ0NmU5MDdmIiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.LQ1c2H0gAcQgb4BxMLN5zlsYYBV1wdue9izDOGi2woY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"title\":\"My first task as test\",\r\n\"description\":\"thats the first test task\",\r\n\"due_date\": \"2024-03-14T12:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks/2/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzUyMTU2LCJpYXQiOjE3MTAzNTEyNTYsImp0aSI6ImRlZWVkNTM0ZjAyODQ1NjI5NDYwNmE4NTdmYjZmOWQ0IiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.IBB-tHzRAoZNNMRk4PLQaEKPOXdjgH6LSe2sZVfeWh0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/2/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks/delete/uuid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzQ3NjMwLCJpYXQiOjE3MTAzNDY3MzAsImp0aSI6IjI3NTBlZmRlMzA1MDQwYmRhMWM5ZDc4OTQ0NmU5MDdmIiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.LQ1c2H0gAcQgb4BxMLN5zlsYYBV1wdue9izDOGi2woY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/delete/fad0aa5e-415a-4a37-9471-8efd5980be40",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"delete",
+						"fad0aa5e-415a-4a37-9471-8efd5980be40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks/update/uuid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzQ3NjMwLCJpYXQiOjE3MTAzNDY3MzAsImp0aSI6IjI3NTBlZmRlMzA1MDQwYmRhMWM5ZDc4OTQ0NmU5MDdmIiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.LQ1c2H0gAcQgb4BxMLN5zlsYYBV1wdue9izDOGi2woY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"\",\r\n    \"due_date\": \"2024-03-15T12:02:00\",\r\n    \"status\": \"COMPLETE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks/update/8e6b4ac0-cc9e-4b30-bc1a-95886e1f39a1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks",
+						"update",
+						"8e6b4ac0-cc9e-4b30-bc1a-95886e1f39a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks?status=COMPLETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzUyMTU2LCJpYXQiOjE3MTAzNTEyNTYsImp0aSI6ImRlZWVkNTM0ZjAyODQ1NjI5NDYwNmE4NTdmYjZmOWQ0IiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.IBB-tHzRAoZNNMRk4PLQaEKPOXdjgH6LSe2sZVfeWh0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks?status=COMPLETE",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "COMPLETE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzUyMTU2LCJpYXQiOjE3MTAzNTEyNTYsImp0aSI6ImRlZWVkNTM0ZjAyODQ1NjI5NDYwNmE4NTdmYjZmOWQ0IiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.IBB-tHzRAoZNNMRk4PLQaEKPOXdjgH6LSe2sZVfeWh0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/tasks?status=COMPLETE&due_date=2024-03-15T12:02:00",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEwMzUzMDczLCJpYXQiOjE3MTAzNTIxNzMsImp0aSI6ImY1NDlhZmYzYjc2YzQwZDNhZDZmNmFmNmY1MWFmM2UyIiwidXNlcl9pZCI6ImJhODYxYTI3LTk2ZTEtNDI1Yy05MDVlLTVkMTQzZmI0ZGJmNCJ9.Na2l_HYd3DR5aA5tIEl4zV_m4PS9DJi0b3d_4DKXS3I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/tasks?status=COMPLETE&due_date=2024-03-15T12:02:00",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "COMPLETE"
+						},
+						{
+							"key": "due_date",
+							"value": "2024-03-15T12:02:00"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
