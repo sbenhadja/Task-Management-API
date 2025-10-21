@@ -107,7 +107,7 @@
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/tasks/add",
+			"name": "http://127.0.0.1:8000/tasks/",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -131,7 +131,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/tasks/add",
+					"raw": "http://127.0.0.1:8000/tasks/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -149,7 +149,7 @@
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/tasks/2/1",
+			"name": "http://127.0.0.1:8000/tasks?page=1&page_size=10",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -164,7 +164,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/tasks/2/1",
+					"raw": "http://127.0.0.1:8000/tasks?page=1&page_size=10",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -183,7 +183,7 @@
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/tasks/delete/uuid",
+			"name": "http://127.0.0.1:8000/tasks/uuid",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -198,7 +198,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/tasks/delete/fad0aa5e-415a-4a37-9471-8efd5980be40",
+					"raw": "http://127.0.0.1:8000/tasks/fad0aa5e-415a-4a37-9471-8efd5980be40",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -217,7 +217,7 @@
 			"response": []
 		},
 		{
-			"name": "http://127.0.0.1:8000/tasks/update/uuid",
+			"name": "http://127.0.0.1:8000/tasks/uuid",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -241,7 +241,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/tasks/update/8e6b4ac0-cc9e-4b30-bc1a-95886e1f39a1",
+					"raw": "http://127.0.0.1:8000/tasks/8e6b4ac0-cc9e-4b30-bc1a-95886e1f39a1",
 					"protocol": "http",
 					"host": [
 						"127",
